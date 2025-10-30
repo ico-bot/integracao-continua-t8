@@ -1,0 +1,13 @@
+name: Primeiro workflow
+on:
+  push:
+jobs:
+  primeiro-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Primeiro Passo"
+      - name: Checkout
+        uses: actions/checkout@v5
+      - name: Lista Arquivos
+        run: ls ${{ github.workspace}}
+      
